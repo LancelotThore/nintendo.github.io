@@ -41,9 +41,6 @@
 }
 
 :root {
-  --background: var(--white);
-  --foreground: var(--dark-gray);
-
   --black: #171717;
   --white: #ffffff;
   --primary-red: #e60012;
@@ -51,6 +48,14 @@
   --light-blue: #d6f0fa;
   --light-gray: #efefef;
   --dark-gray: #434242;
+
+  --accent: var(--primary-red);
+  --background: var(--white);
+  --foreground: var(--dark-gray);
+}
+
+.bg-accent {
+  background-color: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,7 +65,7 @@
   
     --black: #171717;
     --white: #ffffff;
-    --primary-red: #e60012;
+    --accent: #e60012;
     --primary-blue: #0b2b6b;
     --light-blue: #d6f0fa;
     --light-gray: #efefef;
