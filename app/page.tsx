@@ -1,7 +1,9 @@
-import NavBar from "@/components/ui/NavBar/navBar";
+import Breadcrumb from "@/components/ui/breadcrumb";
 
 export default function Home() {
   return (
-    <NavBar />
+    <div>
+      <Breadcrumb></Breadcrumb>
+    </div>
   );
 }

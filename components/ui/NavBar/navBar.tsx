@@ -1,30 +1,52 @@
 "use client";
 
-import { BurgerMenu, HeartIcon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, ChevronDownIcon, ChevronRightIcon, XCircleIcon } from "@/components/ui/icons";
+import { BurgerMenu, HeartIcon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, ChevronDownIcon, ChevronRightIcon, XCircleIcon, Nintendo, NintendoStore, NintendoCoin } from "@/components/ui/icons";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function NavBar() {
   const [isBurgerMenuOpen, setBurgerMenuOpen] = useState(false);
   const [isAccountMenuOpen, setAccountMenuOpen] = useState(false);
 
   return (
-    <nav>
+    <nav className="">
+      <div className="flex items-center justify-between bg-accent px-4 py-3 md:hidden">
+        <Nintendo className="text-background w-24"/>
+        <div className="flex gap-5">
+          <NintendoStore className="text-background w-32"/>
+          <Link href="/">
+            <Image className="border border-white rounded" src="/flags/usa.webp" alt="US Flag" width={24} height={24}></Image>
+          </Link>
+        </div>
+      </div>
+      <div className="flex items-center justify-center bg-secondary-background px-4 py-3 md:hidden">
+        <NintendoCoin className="w-6 mr-4 text-accent" />
+        <p>Earn <Link href="/" className="font-bold underline">My Nintendo Points</Link> on digital games</p>
+      </div>
+
       {/* Mobile Navigation */}
       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 md:hidden">
-        <ul className="flex items-center justify-center px-4 bg-background drop-shadow-2xl rounded-full">
+        <ul className="flex items-center justify-center px-4 bg-background drop-shadow-2xl rounded-full z-50 relative">
           <li className="flex items-center justify-center flex-auto h-14">
             <button onClick={() => setBurgerMenuOpen(!isBurgerMenuOpen)} aria-label="Main menu">
               {isBurgerMenuOpen ? <XCircleIcon className="w-6 h-6" /> : <BurgerMenu className="w-6 h-6" />}
             </button>
           </li>
           <li className="flex items-center justify-center flex-auto h-14">
-            <HeartIcon className="w-6 h-6" aria-label="Wish List" />
+            <Link href="/">
+              <HeartIcon className="w-6 h-6" aria-label="Wish List" />
+            </Link>
           </li>
-          <li className="flex items-center justify-center flex-auto h-14 bg-[var(--accent)] text-background">
-            <MagnifyingGlassIcon className="w-8 h-8" aria-label="Search" />
+          <li className="flex items-center justify-center flex-auto h-14 text-background">
+            <Link href="/" className="flex items-center justify-center bg-accent rounded-full mt-[-1rem] w-15	h-15">
+              <MagnifyingGlassIcon className="w-8 h-8" aria-label="Search" />
+            </Link>
           </li>
           <li className="flex items-center justify-center flex-auto h-14">
-            <ShoppingCartIcon className="w-6 h-6" aria-label="Shopping cart" />
+            <Link href="/">
+              <ShoppingCartIcon className="w-6 h-6" aria-label="Shopping cart" />
+            </Link>
           </li>
           <li className="flex items-center justify-center flex-auto h-14">
             <button onClick={() => setAccountMenuOpen(!isAccountMenuOpen)} aria-label="Account">
@@ -33,42 +55,38 @@ export default function NavBar() {
           </li>
         </ul>
         {isBurgerMenuOpen && (
-          <div className="absolute top-0 left-0 w-full bg-white z-20 p-4 translate-y-[-100%] h-fit">
-            <div className="flex justify-between items-center">
-              <h2>Menu</h2>
-              <button onClick={() => setBurgerMenuOpen(false)} aria-label="Close">
-                <XCircleIcon className="w-6 h-6" />
+          <div className="absolute top-2/4 left-0 w-full bg-gray-100 z-20 pb-12 translate-y-[-100%] h-fit rounded-t-2xl overflow-hidden flex items-center justify-center flex-col gap-px">
+            <div className="flex justify-center items-center relative bg-background w-full p-4">
+              <h2 className="font-bold text-2xl text-center">Menu</h2>
+              <button onClick={() => setBurgerMenuOpen(false)} aria-label="Close" className="absolute right-4">
+                <XCircleIcon className="w-7 h-7" />
               </button>
             </div>
-            <ul>
-              <li>
-                <button className="flex justify-between w-full">
-                  <span>My Nintendo Store</span>
-                  <ChevronRightIcon className="w-4 h-4" />
-                </button>
+            <ul className="w-full flex items-center justify-center flex-col gap-0.5">
+              <li className="flex items-center w-full px-6 py-4 bg-background">
+                <HeartIcon className="w-4 h-4 text-accent mr-2" />
+                <p className="w-full">My Nintendo Store</p>
+                <ChevronRightIcon className="w-4 h-4" />
               </li>
-              <li>
-                <button className="flex justify-between w-full">
-                  <span>Games</span>
-                  <ChevronRightIcon className="w-4 h-4" />
-                </button>
+              <li className="flex items-center w-full px-6 py-4 bg-background">
+                <HeartIcon className="w-4 h-4 text-accent mr-2" />
+                <p className="w-full">My Nintendo Store</p>
+                <ChevronRightIcon className="w-4 h-4" />
               </li>
-              <li>
-                <button className="flex justify-between w-full">
-                  <span>Nintendo Switch</span>
-                  <ChevronRightIcon className="w-4 h-4" />
-                </button>
+              <li className="flex items-center w-full px-6 py-4 bg-background">
+                <HeartIcon className="w-4 h-4 text-accent mr-2" />
+                <p className="w-full">My Nintendo Store</p>
+                <ChevronRightIcon className="w-4 h-4" />
               </li>
-              <li>
-                <a href="/us/whatsnew/" className="flex justify-between w-full">
-                  <span>News & Events</span>
-                </a>
+              <li className="flex items-center w-full px-6 py-4 bg-background">
+                <HeartIcon className="w-4 h-4 text-accent mr-2" />
+                <p className="w-full">My Nintendo Store</p>
+                <ChevronRightIcon className="w-4 h-4" />
               </li>
-              <li>
-                <button className="flex justify-between w-full">
-                  <span>Play Nintendo</span>
-                  <ChevronRightIcon className="w-4 h-4" />
-                </button>
+              <li className="flex items-center w-full px-6 py-4 bg-background">
+                <HeartIcon className="w-4 h-4 text-accent mr-2" />
+                <p className="w-full">My Nintendo Store</p>
+                <ChevronRightIcon className="w-4 h-4" />
               </li>
             </ul>
           </div>
