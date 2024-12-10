@@ -56,11 +56,39 @@ function ChevronDownIcon(props: SVGAttributes<SVGElement>) {
   );
 }
 
+function ChevronLeftIcon(props: SVGAttributes<SVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      color="currentColor"
+      data-testid="ChevronLeftIcon"
+      viewBox="0 0 32 32"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="m14.3 16 12.4 11.7-4.5 4.3L5.3 16 22.2 0l4.5 4.3z"
+      ></path>
+    </svg>
+  );
+}
+
 function ChevronRightIcon(props: SVGAttributes<SVGElement>) {
   return (
-    <svg data-slot="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" {...props}>
-      <path clipRule="evenodd" fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" />
-    </svg>
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    color="currentColor"
+    data-testid="ChevronRightIcon"
+    viewBox="0 0 32 32"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M5.3 4.3 9.8 0l16.9 16L9.8 32l-4.5-4.3L17.7 16z"
+      clipRule="evenodd"
+    ></path>
+  </svg>
   );
 }
 
@@ -126,4 +154,4 @@ function NintendoCoin(props: SVGAttributes<SVGElement>) {
   )
 }
 
-export { BurgerMenu, HeartIcon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XCircleIcon, ChevronDownIcon, ChevronRightIcon, Nintendo, NintendoStore, NintendoCoin };
+export { BurgerMenu, HeartIcon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XCircleIcon, ChevronDownIcon, ChevronRightIcon, Nintendo, NintendoStore, NintendoCoin, ChevronLeftIcon };

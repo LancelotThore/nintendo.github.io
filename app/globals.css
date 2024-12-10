@@ -6,6 +6,8 @@
   --color-accent: var(--accent);
   --color-secondary-background: var(--light-gray);
   --color-secondary-foreground: var(--light-gray);
+  --color-button-background: var(--dark-gray);
+  --color-button-foreground: var(--light-gray);
 }
 
 /*

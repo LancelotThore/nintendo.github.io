@@ -110,11 +110,10 @@ export default function NavBar() {
       {/* Desktop Navigation */}
       <div className="hidden md:block">
         <header className="flex items-center justify-between">
-          <a href="/us/" className="flex items-center">
-            <span className="text-lg font-bold">Nintendo</span>
-            {/* <NintendoRacetrackLogoIcon className="w-16 h-16" /> */}
-          </a>
-          <div className="flex items-center space-x-4">
+          <div className="flex">
+            <Link href="/" className="flex items-center justify-center h-full bg-accent">
+              <Nintendo className="w-24 text-white" />
+            </Link>
             <form className="flex items-center" method="get" autoComplete="off">
               <button aria-haspopup="dialog" className="flex items-center space-x-2">
                 <MagnifyingGlassIcon className="w-4 h-4" />
@@ -122,6 +121,8 @@ export default function NavBar() {
               </button>
               <input type="text" placeholder="Search games, hardware, news, etc" className="ml-2 p-1 border rounded" />
             </form>
+          </div>
+          <div className="flex items-center space-x-4">
             <a href="https://en-americas-support.nintendo.com/" target="_blank" className="flex items-center space-x-2">
               {/* <SupportIcon className="w-4 h-4" /> */}
               <span>Support</span>
