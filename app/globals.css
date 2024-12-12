@@ -5,9 +5,11 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-secondary-background: var(--light-gray);
-  --color-secondary-foreground: var(--light-gray);
+  --color-secondary-foreground: var(--white);
+  --color-fg-detail: var(--gray);
   --color-button-background: var(--dark-gray);
   --color-button-foreground: var(--light-gray);
+  --color-bg-gallery: var(--light-blue);
 }
 
 /*
@@ -52,6 +54,7 @@
   --primary-blue: #0b2b6b;
   --light-blue: #d6f0fa;
   --light-gray: #efefef;
+  --gray: #727272;
   --dark-gray: #434242;
 
   --accent: var(--primary-red);
@@ -75,8 +78,40 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.heart-filled {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.filled .heart-filled {
+  opacity: 1;
+}
+
+.filled .heart-outline {
+  opacity: 0;
+}
+
+.opacity-100 .heart-filled {
+  opacity: 1;
+}
+
+.filled .heart-outline {
+  opacity: 0;
+}
+
+.spark {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.filled .spark {
+  opacity: 1;
+}
+
+.opacity-100 .spark {
+  opacity: 1;
+}
+
+.shadow {
+  box-shadow: rgba(60, 64, 89, 0.15) 0px 4px 16px 0px;
 }

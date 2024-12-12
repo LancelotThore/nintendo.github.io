@@ -26,7 +26,7 @@ export default function NavBar() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 md:hidden">
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 md:hidden z-50">
         <ul className="flex items-center justify-center px-4 bg-background drop-shadow-2xl rounded-full z-50 relative">
           <li className="flex items-center justify-center flex-auto h-14">
             <button onClick={() => setBurgerMenuOpen(!isBurgerMenuOpen)} aria-label="Main menu">
