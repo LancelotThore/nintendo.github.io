@@ -11,6 +11,7 @@
   --color-button-foreground: var(--light-gray);
   --color-bg-gallery: var(--light-blue);
   --color-hover-bg-gallery: var(--dark-red);
+  --color-bg-dark: var(--dark-gray);
 }
 
 /*

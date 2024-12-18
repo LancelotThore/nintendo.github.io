@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/icons";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const images = [
   {
@@ -154,10 +155,10 @@ export default function Gallery() {
               Eligible for up to <b>75</b> Gold Points
             </p>
           </div>
-          <button className="flex items-center justify-center w-full bg-accent text-secondary-foreground p-4 rounded-xl gap-4 xl:text-xl hover:scale-105 hover:bg-hover-bg-gallery duration-300 cursor-pointer">
+          <Button>
             <DownloadIcon className="w-6" />
             Add To Cart
-          </button>
+          </Button>
           <span className="text-xs">
             This item will be sent to your system automatically after purchase.
           </span>
